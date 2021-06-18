@@ -1,0 +1,20 @@
+# Dubbo Spring Cloud 继承了 Dubbo Spring Boot 的外部化配置特性，也可以通过标注 @DubboComponentScan 来实现基准包扫描
+dubbo:
+  scan:
+    # dubbo 服务扫描基准包
+    base-packages: com.sixtofly.provider.basic.service
+  # dubbo 协议
+  protocols:
+    dubbo:
+      name: dubbo
+      # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+      port: -1
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    # 当前 Dubbo Spring Cloud 实现必须配置 dubbo.registry.address = spring-cloud://localhost
+#   The Spring Cloud Dubbo's registry extension
+    address: spring-cloud://localhost
+#   The traditional Dubbo's registry
+#   address: zookeeper://127.0.0.1:2181
+#  cloud:
+#    subscribed-services: provider-user
