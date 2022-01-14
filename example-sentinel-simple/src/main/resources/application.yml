@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: example-sentinel-simple
+  cloud:
+    sentinel:
+      transport:
+        # sentinel-dashboard 监控服务端口
+        dashboard: 127.0.0.1:9111
+        # 应用与 sentinel-dashboard 监控服务通信的端口
+        port: 8179
+      # 加载时初始化
+      eager: true
+server:
+  port: 8880
+

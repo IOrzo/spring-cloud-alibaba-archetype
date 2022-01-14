@@ -37,6 +37,7 @@
         <module>provider-user</module>
         <module>example-web</module>
         <module>example-api</module>
+        <module>example-sentinel-simple</module>
     </modules>
 
     <build>
